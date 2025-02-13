@@ -1,13 +1,12 @@
-import { Button } from "../lib/components/Button"
-import { Card } from "../lib/components/Card"
+import React from "react"
+import { Card } from "scrappy-ui"
 
 function App() {
 
 
   return (
     <>
-      <Card title={"test"} description={"test2"} />
-      <Button>Hello</Button>
+      <Card title={"tester"} description={"boo"} />
     </>
   )
 }

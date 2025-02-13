@@ -11,7 +11,14 @@
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "emitDeclarationOnly": false,
   },
-  "include": ["src", "lib"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "lib"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src"
+  ]
 }
