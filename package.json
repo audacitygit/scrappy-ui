@@ -1,5 +1,9 @@
 {
-  "name": "vite-project",
+  "name": "scrappy-ui",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/audacitygit/scrappy-ui.git"
+  },
   "private": true,
   "version": "0.0.0",
   "type": "module",
