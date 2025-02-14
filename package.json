@@ -1,6 +1,6 @@
 {
   "name": "scrappy-ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/scrappy-ui.umd.js",
   "module": "dist/scrappy-ui.es.js",
@@ -12,18 +12,27 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "publish": "npm publish --access public"
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "scrappy-ui": "^0.0.0"
+    "scrappy-ui": "^0.0.1",
+    "tailwindcss": "^4.0.6"
+  },
+  "peerDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "tailwindcss": "^4.0.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^22.13.4",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
