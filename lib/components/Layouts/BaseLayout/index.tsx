@@ -1,16 +1,17 @@
-import React, { ReactNode, useState } from "react";
+"use client"
+import { ReactNode } from "react";
 
-interface RootLayoutProps {
+interface BaseLayoutProps {
     header?: ReactNode; // ✅ Optional Top Navigation
     sideNav?: ReactNode; // ✅ Optional Side Navigation
     children: ReactNode;
 }
 
-export function RootLayout({ header, sideNav, children }: RootLayoutProps) {
+export function BaseLayout({ header, sideNav, children }: BaseLayoutProps) {
     return (
-        <div className="flex flex-col h-screen w-screen overflow-hidden">
+        <div className="flex flex-col h-screen w-screen overflow-hidden bg-[#0B0D18]">
             {/* 🔹 Top Navigation (Only Renders if Provided) */}
-            {header && <div className="flex-none">{header}</div>}
+            {header && <div className="z-50 relative">{header}</div>}
 
             {/* 🔹 Main Layout (Sidebar + Scrollable Content) */}
             <div className="flex flex-1 overflow-hidden">
@@ -18,7 +19,7 @@ export function RootLayout({ header, sideNav, children }: RootLayoutProps) {
                 {sideNav && <div className="flex-none">{sideNav}</div>}
 
                 {/* 🔹 Scrollable Page Content */}
-                <div className="flex-1 overflow-y-auto p-4 sm:p-6 md:p-8">{children}</div>
+                <div className="flex-1 overflow-y-auto">{children}</div>
             </div>
         </div>
     );

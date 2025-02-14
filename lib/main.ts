@@ -4,7 +4,9 @@ import { CardContainer } from "./components/Containers/Card_Container";
 import { PageLayout } from "./components/Layouts/PageLayout";
 import { TopNav } from "./components/Navigation/TopNav";
 import { SideNav } from "./components/Navigation/SideNav";
-import { RootLayout } from "./components/Layouts/RootLayout";
+import { BaseLayout } from "./components/Layouts/BaseLayout";
+import { Header } from "./components/Header";
 
 
-export { Button, Card, CardContainer, PageLayout, TopNav, SideNav, RootLayout }
+
+export { Button, Card, CardContainer, PageLayout, TopNav, SideNav, BaseLayout, Header }

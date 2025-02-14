@@ -14,7 +14,8 @@
     "emitDeclarationOnly": false,
   },
   "include": [
-    "lib"
+    "lib",
+    "declarations.d.ts"
   ],
   "exclude": [
     "node_modules",
