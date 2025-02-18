@@ -19,7 +19,7 @@ export function SideNav({
         { label: "Settings", icon: "⚙️", href: "#" },
     ],
 }: SideNavProps) {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <>
@@ -41,12 +41,15 @@ export function SideNav({
                 `}
             >
                 {/* Toggle Button (Always Visible) */}
-                <button
-                    className="mb-4 p-2 bg-[#1574A6] rounded-md flex justify-center"
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    {isOpen ? <ArrowLeft className="text-white w-6 h-6" /> : <Menu className="text-white w-6 h-6" />}
-                </button>
+                <div className="flex w-full justify-end">
+                    <button
+                        className="mb-4 p-2 bg-[#1574A6] rounded-md flex justify-center items-center w-10"
+                        onClick={() => setIsOpen(!isOpen)}
+                    >
+                        {isOpen ? <ArrowLeft className="text-white w-6 h-6" /> : <Menu className="text-white w-6 h-6" />}
+                    </button>
+                </div>
+
 
                 {/* Nav Items */}
                 <ul className="space-y-3">
